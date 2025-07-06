@@ -1,0 +1,14 @@
+{% extends 'main.html' %}
+
+{% block title%} Welcome to Online Testing System {%endblock title%}
+
+{% block top%}  
+<a href="{% url 'Ots:registrationForm' %}">Signup</a>
+<a href="{% url 'Ots:login' %}">Login</a>
+{% endblock %}
+
+{%block content%} 
+<p>
+    An Online Testing System is a web-based platform designed to conduct examinations, assessments, or quizzes over the internet. It allows candidates to register, log in, take timed tests, and receive instant results—all without the need for physical paperwork or in-person supervision. These systems support a range of question formats like multiple-choice, true/false, and short answers, often with automatic grading to speed up evaluation. They're especially valuable in educational institutions, recruitment processes, and certification programs, offering scalability, security, and convenience. By leveraging technology, online testing not only saves time but also provides powerful analytics for performance tracking and continuous improvement.
+</p>
+{%endblock content%}

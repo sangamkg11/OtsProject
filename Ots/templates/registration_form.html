@@ -1,0 +1,30 @@
+{% extends 'main.html' %}
+
+{% block title%} Ots registration formn{%endblock title%}
+
+{% block top%}  
+<a href="{% url 'Ots:login' %}">Login</a>
+{% endblock %}
+
+{%block content%} 
+<div class="allforms">
+    <form action="{% url 'Ots:storeCandidate' %}" method="post">
+        <!-- we always have to use the CSRF token when we work with the form in post method -->
+        {% csrf_token %}
+
+        <label for="username">Username</label>
+        <input type="text" name="username"><br>
+        <label for="password">Password</label>
+        <input type="password" name="password"><br>
+        <label for="name">Name</label>
+        <input type="text" name="name"><br>
+        
+        
+        <input type="submit" value="submit">
+        <input type="reset" value="reset">
+
+    </form>
+
+    Already have an account <a href="{%url 'Ots:login'%}">Click here!</a>
+</div>
+{%endblock content%}
